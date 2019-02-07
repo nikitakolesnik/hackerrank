@@ -70,7 +70,7 @@ void free_singly_linked_list(SinglyLinkedListNode* node) {
  */
 bool has_cycle(SinglyLinkedListNode* head) {
     SinglyLinkedListNode *trav = head;
-    unordered_set<SinglyLinkedListNode*> *s = new       unordered_set<SinglyLinkedListNode*>();
+    unordered_set<SinglyLinkedListNode*> *s = new unordered_set<SinglyLinkedListNode*>();
 
     while (trav)
     {
