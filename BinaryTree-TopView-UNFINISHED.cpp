@@ -64,6 +64,7 @@ public:
 
     void topViewIterate(Node *root, int &level, map<short, int> &M) // TODO: add vertical level to arguments?
     {
+    	// If the level is unique, add level,value pair to map
         M.insert(pair<short, int>(level, root->data)); // TODO: Compare vertical levels, overwrite old if new smaller
 
         if (root->left)  topViewIterate(root->left,  --level, M);
