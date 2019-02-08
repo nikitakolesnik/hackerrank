@@ -3,7 +3,7 @@
 // This still fails for some test cases and needs to take into account vertical level as well as horizontal.
 // The mistake here was assuming that the first visited node in each horizontal level would be the topmost one
 
-// My solution in progress are the two functions spanning lines 43 through 71, rest was pre-filled
+// My solution in progress are the two functions spanning lines 44 through 72, rest was pre-filled
 
 #include<bits/stdc++.h>
 
@@ -22,23 +22,24 @@ class Node {
 };
 
 class Solution {
-    public:
-  		Node* insert(Node* root, int data) {
-            if(root == NULL) {
-                return new Node(data);
-            } else {
-                Node* cur;
-                if(data <= root->data) {
-                    cur = insert(root->left, data);
-                    root->left = cur;
-                } else {
-                    cur = insert(root->right, data);
-                    root->right = cur;
-               }
-
-               return root;
-           }
-        }
+public:
+	Node* insert(Node* root, int data) {
+		if (root == NULL) {
+			return new Node(data);
+		}
+		else {
+			Node* cur;
+			if (data <= root->data) {
+				cur = insert(root->left, data);
+				root->left = cur;
+			}
+			else {
+				cur = insert(root->right, data);
+				root->right = cur;
+			}
+			return root;
+		}
+	}
 
     void topView(Node *root)
     {
@@ -53,15 +54,13 @@ class Solution {
         int level = 0;
         map<short, int> M;
 
-        //M.insert(pair<short, int>(level, root->data));
-
         topViewIterate(root, level, M);
 
         for (auto i = M.cbegin(); i != M.cend(); i++)
             cout << i->second << " ";
     }
 
-    void topViewIterate(Node *root, int &level, /*bool LR,*/ map<short, int> &M)
+    void topViewIterate(Node *root, int &level, map<short, int> &M)
     {
         M.insert(pair<short, int>(level, root->data));
 
