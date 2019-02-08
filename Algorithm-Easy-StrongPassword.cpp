@@ -1,4 +1,5 @@
 // https://www.hackerrank.com/challenges/strong-password/problem
+// Solution is the minimumNumber function, rest is pre-filled
 
 #include <bits/stdc++.h>
 
