@@ -1,4 +1,5 @@
 // https://www.hackerrank.com/challenges/time-conversion/problem
+// Solution is the timeConversion function, rest is pre-filled
 
 #include <bits/stdc++.h>
 
