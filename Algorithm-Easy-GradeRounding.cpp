@@ -1,12 +1,10 @@
 // https://www.hackerrank.com/challenges/grading/problem
+// Solution is the gradingStudents function, rest is pre-filled
 
 #include <bits/stdc++.h>
 
 using namespace std;
 
-/*
- * Complete the gradingStudents function below.
- */
 vector<int> gradingStudents(vector<int> grades) {
     for (int i = 0; i < grades.size(); i++)
         if (grades[i] >= 38)
