@@ -5,7 +5,8 @@
 
 // My solution in progress are the two functions spanning lines 44 through 72, rest was pre-filled
 
-#include<bits/stdc++.h>
+#include<iostream>
+#include<map>
 
 using namespace std;
 
@@ -51,8 +52,9 @@ public:
         - After the entire tree is visited, iterate through the map in ascending order of levels, printing the node values
         */
 
-        int level = 0;
-        map<short, int> M;
+        int level = 0; // TODO: label this as horizontal level
+	// TODO: declare vertical level?
+        map<short, int> M; // TODO: Expand this to include the vertical level as well
 
         topViewIterate(root, level, M);
 
@@ -60,9 +62,9 @@ public:
             cout << i->second << " ";
     }
 
-    void topViewIterate(Node *root, int &level, map<short, int> &M)
+    void topViewIterate(Node *root, int &level, map<short, int> &M) // TODO: add vertical level to arguments?
     {
-        M.insert(pair<short, int>(level, root->data));
+        M.insert(pair<short, int>(level, root->data)); // TODO: Compare vertical levels, overwrite old if new smaller
 
         if (root->left)  topViewIterate(root->left,  --level, M);
         if (root->right) topViewIterate(root->right, ++level, M);
