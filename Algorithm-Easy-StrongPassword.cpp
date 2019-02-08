@@ -19,7 +19,7 @@ int minimumNumber(int n, string password) {
     unsigned short total = 0;
     for (short i = 0; i < 4; i++) if (!has[i]) total++;
 
-    return (n + total < 6) ? 6 - n : total;
+    return (n + total < 6) ? 6 - n : total; // How many more characters have to be added to constitute a "safe" password
 }
 
 int main()
