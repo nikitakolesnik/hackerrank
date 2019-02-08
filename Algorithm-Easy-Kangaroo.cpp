@@ -9,7 +9,7 @@ vector<string> split_string(string);
 // Complete the kangaroo function below.
 string kangaroo(int start1, int jumprange1, int start2, int jumprange2) {
     /* 
-        // Kangaroo 2 always starts in front, so its jump range must be smaller
+        // Kangaroo 2 always starts in front, so its jump range must be smaller for passing case
 
         j*r1 + s1 = j*r2 + s2
         j*r1 + s1 - s2 = j*r2
