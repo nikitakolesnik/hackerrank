@@ -1,4 +1,5 @@
 // https://www.hackerrank.com/challenges/box-it/problem
+// Solution is the two overloads from lines 21 to 31, rest is pre-filled
 
 #include<bits/stdc++.h>
 
@@ -29,9 +30,6 @@ public:
         return out;
     }
 };
-
-// Above is solution
-// Below is pre-filled
 
 void check2()
 {
