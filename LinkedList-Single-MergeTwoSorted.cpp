@@ -1,4 +1,5 @@
 // https://www.hackerrank.com/challenges/merge-two-sorted-linked-lists/problem
+// My solution starts on line 74; previous code & main are pre-filled
 
 #include <bits/stdc++.h>
 
