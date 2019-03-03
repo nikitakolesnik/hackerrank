@@ -3,7 +3,7 @@
 // This still fails for some test cases and needs to take into account vertical level as well as horizontal.
 // The mistake here was assuming that the first visited node in each horizontal level would be the top-most one
 
-// My solution in progress is the two functions spanning lines 44 through 72, rest was pre-filled
+// My solution in progress is the two functions spanning lines 44 through 72; rest was pre-filled
 
 #include<iostream>
 #include<map>
@@ -87,6 +87,6 @@ int main() {
         root = myTree.insert(root, data);
     }
   
-	myTree.topView(root);
+    myTree.topView(root);
     return 0;
 }
