@@ -1,7 +1,6 @@
 // https://www.hackerrank.com/challenges/tree-top-view/problem
 
-// This still fails for some test cases and needs to take into account vertical level as well as horizontal.
-// The mistake here was assuming that the first visited node in each horizontal level would be the top-most one
+// This gives the incorrect result for test cases where the first node of a vertical level visited by an in-order traversal is not the top-most one
 
 // My solution in progress is the two functions spanning lines 44 through 72; rest was pre-filled
 
