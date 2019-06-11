@@ -1,12 +1,15 @@
 // https://www.hackerrank.com/challenges/strong-password/problem
 // Solution is the minimumNumber function, rest is pre-filled
 
+// This one doesn't demonstrate any impressive knowledge to be honest; I just thought the solution was very streamlined.
+
 #include <bits/stdc++.h>
 
 using namespace std;
 
 // Complete the minimumNumber function below.
-int minimumNumber(int n, string password) {
+int minimumNumber(int n, string password) 
+{
     bool has[4] = {};
 
     for (int i = 0; i < n; i++) {
@@ -17,7 +20,9 @@ int minimumNumber(int n, string password) {
     }
 
     unsigned short total = 0;
-    for (short i = 0; i < 4; i++) if (!has[i]) total++;
+    for (short i = 0; i < 4; i++) 
+        if (!has[i]) 
+            total++;
 
     return (n + total < 6) ? 6 - n : total; // How many more characters have to be added to constitute a "safe" password
 }
